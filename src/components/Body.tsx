@@ -1,13 +1,18 @@
 import * as React from "react";
+import MothersDay from "components/MothersDay";
+import Song from "components/Song";
 
 const Body: React.FC = () => {
 
   return (
     <>
-      <nav className="navbar navbar-dark bg-primary">
+      {/* <nav className="navbar navbar-dark bg-primary">
         <span className="navbar-brand mb-0 h1">Happy Mothers Day</span>
-      </nav>
-      <nav>
+      </nav> */}
+      <Song />
+      <MothersDay />
+
+      {/* <nav>
         <div className="nav nav-tabs mt-2" id="nav-tab" role="tablist">
           <a 
             className="nav-item nav-link active" 
@@ -40,7 +45,6 @@ const Body: React.FC = () => {
           role="tabpanel" 
           aria-labelledby="nav-home-tab"
         >
-          Pictures Here
         </div>
         <div 
           className="tab-pane fade" 
@@ -50,7 +54,7 @@ const Body: React.FC = () => {
         >
           Happy Mothers Day
         </div>
-      </div>
+      </div> */}
     </>
   )
 };

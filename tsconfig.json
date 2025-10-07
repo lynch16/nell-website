@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "../public",
+    "outDir": "dist",
     "paths": {
       "*": [
         "*",
@@ -32,6 +32,7 @@
     "jsx": "react",
     "typeRoots": [
       "node_modules/@types",
+      "typings"
     ]
   },
   "compileOnSave": true,

@@ -9,7 +9,7 @@ module.exports = env => ({
   mode: "development",
   entry: ["./src/main.tsx", "./src/assets/styles.scss"],
   output: {
-    path: path.resolve(__dirname, "..", "public"),
+    path: path.resolve(__dirname, "dist"),
     filename: "rebel-nell.js",
     publicPath: "/"
   },
@@ -54,7 +54,21 @@ module.exports = env => ({
       {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
-      }
+      },
+      {
+        test: /\.(png|jpe?g|gif|jp2|webp)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]'
+        }
+      },
+      {
+        test: /\.(mp3)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'mustic/[name].[ext]'
+        }
+      },
     ]
   },
   resolve: {
